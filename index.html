@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+<head>
+	<meta charset="ytf-8" />
+	<title>Unbeatable Tetris</title>
+	<style>
+	@font-face {font-family:myFont; src: url("ka1.ttf")}
+	</style>
+	<script language="javascript" type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	<script language="javascript" type="text/javascript" src="pieces.js"></script>
+	<script language="javascript" type="text/javascript" src="features.js"></script>
+	<script language="javascript" type="text/javascript" src="decisionMaking.js"></script>
+	<script language="javascript" type="text/javascript" src="artificial.js"></script>
+	<script language="javascript" type="text/javascript" src="canvas.js"></script>
+	<script language="javascript" type="text/javascript" src="player.js"></script>
+
+
+<body background="bgimg2.jpg">
+<table bgcolor="#000000"  border="3" align="center">
+	<tr>
+	<td>
+	<canvas id="canvas" width ="918" height ="620">
+	</canvas></td>
+	<td>
+	<table>
+	<tr><td>
+	<button onclick="scroll()" style="height:67px; width:250px"><label style="font-family:myFont; font-size:25px">Instruction</label></button></td></tr>
+	<tr><td>
+	<button onclick="init()" style="height:67px; width:250px"><label style="font-family:myFont; font-size:25px">Challenge!</label></button></td></tr>
+	<tr><td align="center">
+	<label style="font-family:myFont; font-size:25px; color:white">Difficulty</label></td></tr><tr><td>
+	<select id="difficulty" style="height:60px; width:250px; font-family:myFont; font-size:20px">
+  		<option value ="1">Arcade Mode</option>
+  		<option value ="2">Extreme Hard</option>
+  		<option value ="5">Hard</option>
+  		<option value="10">Easy</option>
+  		<option value="999">Free Mode</option>
+	</select></td></tr>
+	<tr><td>
+	<button onclick="initAI()" style="height:67px; width:250px"><label style="font-family:myFont; font-size:25px">AI Show!</label></button></td></tr>
+	<tr><td align="center">
+	<label style="font-family:myFont; font-size:25px; color:white">Show Speed</label></td></tr><tr><td>
+	<select id="speed" style="height:60px; width:250px; font-family:myFont; font-size:20px">
+		<option value ="10">Light Speed</option>
+  		<option value ="100">Horse Speed</option>
+  		<option value="1000">Tortoise Speed</option>
+	</select><br/></td></tr>
+	<tr><td>
+	<button onclick="reload()" style="height:67px; width:250px"><label style="font-family:myFont; font-size:25px">Reload</label></button></td></tr>
+	<tr><td>
+		<table>
+			<tr>
+				<td>
+				</td>
+				<td>
+					<button onclick="rotate()" style="height:80px; width:80px"><label style="font-family:myFont; font-size:25px">Up</label></button>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button onclick="moveLeft()" style="height:80px; width:80px"><label style="font-family:myFont; font-size:25px">Lf</label></button>
+				</td>
+				<td>
+					<button onclick="down()" style="height:80px; width:80px"><label style="font-family:myFont; font-size:25px">Dn</label></button>
+				</td>
+				<td>
+					<button onclick="moveRight()" style="height:80px; width:80px"><label style="font-family:myFont; font-size:25px">Rt</label></button>
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	</table>
+	</td>
+	</tr>
+</table>
+<br/>
+<table align="center"><tr><td>
+<div style="font-family:myFont; font-size:18px; color:white">
+		<font size="6">Instructions</font><br/>
+		<ul>
+		<li>Press "Challenge" to fight with AI</li>
+		<li>Press "Show AI" to run AI automatically</li>
+		<li>Press "Reload" to reload the game. You need to reload each time when you finish a game.</li>
+		<li>You can choose the difficuly of game, and the speed of show through two drop-down menus.</li>
+		<li>Press "UP" on keyboard to rotate the shape.</li>
+		<li>Press "LEFT" and "RIGHT" on keyboard to move the shape horizontally.</li>
+		<li>Press "DOWN" on keyboard to finish a move.</li>
+		<li>You can also use the virtual keyboard to control.</li>
+		</ul>
+</div></td></tr>
+	<tr><td>
+		<div style="font-family:myFont; font-size:18px; color:white">
+		Thanks for Prof.Bart Selman and CS4701.<br/>
+		Developed by Cornell student Xi He and Yanjia Li.</div>
+	</td></tr>
+</table>
+
+	
+</body>
+</html>
