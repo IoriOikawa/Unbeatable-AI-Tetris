@@ -134,10 +134,10 @@ function drawConsole(){
 	gradient.addColorStop("1.0","red");
 	c.font = "20px myFont";
 	c.fillStyle=gradient;
-	c.fillText("AI Lines: "+rows_completed, 350, 150);
-	c.fillText("Player Lines: "+player_rows_completed, 350, 200);
+	c.fillText("AI Score: "+rows_completed, 350, 150);
+	c.fillText("Player Score: "+player_rows_completed, 350, 200);
 	c.fillText("Level: "+currentLevel, 350, 250);
-	c.fillText("Next Shape:", 350, 300);
+	c.fillText("Next Piece:", 350, 300);
 	c.fillText("Time Left:", 380, 500);
 	c.font = "60px myFont";
 	if(timeLeft>99){
